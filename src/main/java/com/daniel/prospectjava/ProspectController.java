@@ -5,8 +5,12 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class ProspectController {
-    @GetMapping
-    public String get(){
-        return "Olá";
+    @GetMapping("/public")
+    public String publicRoute(){
+        return "Olá publicRoute";
+    }
+    @GetMapping("/private")
+    public String privateRoute(){
+        return "Olá privateRoute";
     }
 }
